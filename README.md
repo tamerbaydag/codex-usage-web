@@ -2,7 +2,7 @@
 
 A small, self-hosted web dashboard for monitoring OpenClaw / Codex usage limits.
 
-![Codex Usage Web screenshot](docs/screenshot.svg)
+![Codex Usage Web screenshot](docs/screenshot.jpg)
 
 ## Features
 
