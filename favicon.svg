@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Codex Usage favicon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050b12"/>
+      <stop offset="100%" stop-color="#0b1624"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#28d6b3"/>
+      <stop offset="100%" stop-color="#20bfa0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="34" y="34" width="444" height="444" rx="96" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="4"/>
+  <path d="M332 146c-34-28-86-32-129-10-54 27-83 89-70 147 13 60 61 107 121 119 50 10 98-5 133-36l-34-34c-26 21-60 31-94 24-41-8-75-41-84-82-9-43 10-89 49-109 31-16 67-14 95 6z" fill="url(#accent)"/>
+  <path d="M322 194c-21-14-48-16-72-7-31 12-52 42-52 75 0 34 21 63 52 75 24 9 51 7 72-7v-44c-15 15-37 22-58 16-24-7-41-29-41-56s17-49 41-56c21-6 43 1 58 16z" fill="#050b12" opacity="0.95"/>
+  <circle cx="370" cy="168" r="12" fill="#e8eef7" opacity="0.9"/>
+</svg>
