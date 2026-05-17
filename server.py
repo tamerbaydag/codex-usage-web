@@ -29,7 +29,7 @@ FAVICON_SVG = b'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" 
   <circle cx="332" cy="262" r="14" fill="url(#accent)" opacity="0.85"/>
   <circle cx="384" cy="344" r="12" fill="url(#accent)" opacity="0.7"/>
 </svg>'''
-FAVICON_PATH = Path(__file__).with_name('favicon-c.svg')
+FAVICON_PATH = Path(__file__).with_name('favicon.svg')
 if FAVICON_PATH.exists():
     FAVICON_SVG = FAVICON_PATH.read_bytes()
 
@@ -125,7 +125,7 @@ def render(s):
           <div class="reset">Sıfırlanma: {html.escape(w['reset'])}</div>
         </section>'''
     return f'''<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta http-equiv="refresh" content="30"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#050b12"><title>Codex Usage</title><link rel="icon" href="/favicon-c.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/favicon-c.svg"><style>
+    <meta http-equiv="refresh" content="30"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#050b12"><title>Codex Usage</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/favicon.svg"><style>
     *{{box-sizing:border-box}} html{{min-height:100%;background:#050b12!important;color-scheme:dark!important}} body{{min-height:100svh;margin:0!important;background:#050b12!important;background-image:radial-gradient(circle at top,#102235 0,#050b12 52%,#03070c 100%)!important;color:#e8eef7!important;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;padding:clamp(8px,2vw,18px)!important}}
     .wrap{{width:100%;max-width:980px;min-height:calc(100svh - clamp(16px,4vw,36px));margin:0 auto;display:flex;flex-direction:column;gap:14px}} h1{{font-size:clamp(34px,9vw,56px);line-height:.95;margin:0}} .sub,.muted,.reset{{color:#9daaba}} .sub{{font-size:15px;line-height:1.45}} .grid{{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;flex:1}}
     .card{{border:1px solid rgba(40,214,179,.28)!important;background:#08101a!important;background-image:linear-gradient(180deg,rgba(13,25,40,.99),rgba(8,15,24,.99))!important;color:#e8eef7!important;border-radius:26px;padding:clamp(20px,5.4vw,34px);box-shadow:0 18px 48px rgba(0,0,0,.38)}}
@@ -141,7 +141,7 @@ def render(s):
 class H(BaseHTTPRequestHandler):
     def do_GET(self):
         request_path = self.path.split('?',1)[0]
-        if request_path in ('/favicon-c.svg', '/favicon.svg', '/favicon.ico'):
+        if request_path in ('/favicon.svg', '/favicon.svg', '/favicon.ico'):
             self.send_response(200)
             self.send_header('Content-Type', 'image/svg+xml; charset=utf-8')
             self.send_header('Cache-Control', 'no-store, max-age=0')
