@@ -15,7 +15,7 @@ A small, self-hosted web dashboard for monitoring OpenClaw / Codex usage limits.
 ## Requirements
 
 - Python 3.10+
-- OpenClaw CLI available as `openclaw`
+- OpenClaw CLI available as `openclaw` on PATH, or via `OPENCLAW_BIN`
 
 ## Quick start
 
@@ -32,6 +32,8 @@ http://127.0.0.1:8787/
 ```
 
 ## Optional configuration
+
+The app resolves `openclaw` from `OPENCLAW_BIN`, then `PATH`, so it works on other machines without a hardcoded user path.
 
 Copy the example env file:
 
