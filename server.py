@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, os, subprocess, html, time, threading
+import json, os, subprocess, html, time, threading, shutil
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -57,7 +57,8 @@ def fmt_reset(ms):
 
 
 def build_snapshot():
-    raw = subprocess.check_output([os.environ.get('OPENCLAW_BIN', '/home/master/.npm-global/bin/openclaw'), 'status', '--usage', '--json'], text=True, timeout=25)
+    openclaw_bin = os.environ.get('OPENCLAW_BIN') or shutil.which('openclaw') or 'openclaw'
+    raw = subprocess.check_output([openclaw_bin, 'status', '--usage', '--json'], text=True, timeout=25)
     data = json.loads(raw)
     provider = next((p for p in data.get('usage', {}).get('providers', []) if p.get('provider') == 'openai-codex'), {})
     sessions = data.get('sessions', {}).get('recent', [])
